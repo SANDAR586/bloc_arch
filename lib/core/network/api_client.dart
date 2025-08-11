@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart' hide Headers;
 import 'package:retrofit/retrofit.dart';
-import 'package:testing_arch/features/first/domain/models/task.dart';
+import 'package:testing_arch/features/first_c/domain/models/task.dart';
 
 part 'api_client.g.dart';
 

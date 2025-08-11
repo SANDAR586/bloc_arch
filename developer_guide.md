@@ -81,3 +81,7 @@ abstract class ApiService {
 ```bash
    flutter upgrade
 ```
+## feature naming explanation
+ - c : using cubit
+ - b : using bloc
+ - providre : using provider. 
