@@ -50,7 +50,7 @@ abstract class ApiService {
 
 ```
 
-## 3️⃣ When to Run Build Runner
+### 3️⃣ When to Run Build Runner
 
  Run build_runner every time you:
   1. Create a new Retrofit service
@@ -59,29 +59,26 @@ abstract class ApiService {
   4. Add or modify an API interface method
 
 ```bash
-
- 
-
-
+ dart run build_runner build
 ```
-## 📝 Quick Flow
- # Create Model → @JsonSerializable → add fromJson / toJson
- # Create API Class → @RestApi → define endpoints
- # Run build_runner → generates .g.dart files
- # Use API in your code
+### 📝 Quick Flow
+ - Create Model → @JsonSerializable → add fromJson / toJson
+ - Create API Class → @RestApi → define endpoints
+ - Run build_runner → generates .g.dart files
+ - Use API in your code
 
 
-## how to check dart version
+#### how to check dart version
   ```bash  
   dart --version 
 ```
 
-## how to update sdk 
+#### how to update sdk 
 
 ```bash
    flutter upgrade
 ```
-## feature naming explanation
+#### feature naming explanation
  - c : using cubit
  - b : using bloc
  - providre : using provider. 
