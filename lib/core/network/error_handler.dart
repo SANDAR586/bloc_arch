@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:dio/dio.dart';
-import 'package:testing_arch/app/data/api_error.dart';
+import 'package:testing_arch/core/network/api_error.dart';
 
 
 class ApiErrorHandler extends Interceptor {

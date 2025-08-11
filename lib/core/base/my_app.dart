@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testing_arch/app/base/navigation.dart';
-import 'package:testing_arch/app/util/theme.dart';
+import 'package:testing_arch/core/base/navigation.dart';
+import 'package:testing_arch/core/theme.dart';
     
 class MyApp extends StatelessWidget {
 

@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:testing_arch/app/features/first/first_screen.dart';
+import 'package:testing_arch/features/first/first_screen.dart';
 
 /*
 | Action       | Method                          | Stack Behavior       |
