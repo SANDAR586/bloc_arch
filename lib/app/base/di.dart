@@ -1,45 +1,35 @@
 import 'package:get_it/get_it.dart';
 
-final di = GetIt.instance;
+final instance = GetIt.instance;
 
 
 /*
  1️⃣ Factory - new instance every time it's requested
-  di.registerFactory<LoginBloc>(() => LoginBloc(di()));
+  instance.registerFactory<LoginBloc>(() => LoginBloc(instance()));
 
    2️⃣ Lazy Singleton - single instance created only when needed
-  di.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(di()));
+  instance.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(instance()));
 
-   3️⃣ Singleton - single instance created immediately at setup
-  di.registerSingleton<AppConfig>(AppConfig(baseUrl: "https:api.example.com"));
+   3️⃣ Singleton - single instance created immeinstanceately at setup
+  instance.registerSingleton<AppConfig>(AppConfig(baseUrl: "https:api.example.com"));
 
    4️⃣ Async Singleton - single instance after async init (e.g., SharedPreferences)
-  di.registerSingletonAsync<SharedPreferences>(() async {
+  instance.registerSingletonAsync<SharedPreferences>(() async {
     return await SharedPreferences.getInstance();
   });
 
    ⬇️ Call async singletons before app starts
-  await di.allReady();
+  await instance.allReady();
 
   5️⃣ calling Instance
-  final loginBloc = di<LoginBloc>();
+  final loginBloc = instance<LoginBloc>();
   
  */
 
 Future<void> initDepedencyIndection() async {
 
-  // Register your dependencies here
-  // Example:
-  // di.registerFactory<LoginBloc>(() => LoginBloc(di()));
-  // di.registerLazySingleton<AuthRepository>(() => AuthRepositoryImpl(di()));
-  // di.registerSingleton<AppConfig>(AppConfig(baseUrl: "https://api.example.com"));
-  
-  // If you have async initializations, use registerSingletonAsync
-  // await di.registerSingletonAsync<SharedPreferences>(() async {
-  //   return await SharedPreferences.getInstance();
-  // });
-  
-  // Ensure all async singletons are ready before app starts
-  await di.allReady();
+// Register your dependencies here
+ 
+  await instance.allReady();
   
 }

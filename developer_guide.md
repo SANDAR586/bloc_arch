@@ -7,7 +7,7 @@ This guide explains the **minimum steps** for adding new API calls with Retrofit
 ## 1️⃣ Create Your Model Class
 
 - Always annotate with `@JsonSerializable()`.
-- Add `part 'file_name.g.dart';` at the top.
+- Add `part 'file_name.g.dart';` at the top.v
 - Include `fromJson` and `toJson` methods.
 
 ```dart
@@ -60,7 +60,8 @@ abstract class ApiService {
 
 ```bash
 
-flutter pub run build_runner build --delete-conflicting-outputs
+ 
+
 
 ```
 ## 📝 Quick Flow
@@ -68,3 +69,15 @@ flutter pub run build_runner build --delete-conflicting-outputs
  # Create API Class → @RestApi → define endpoints
  # Run build_runner → generates .g.dart files
  # Use API in your code
+
+
+## how to check dart version
+  ```bash  
+  dart --version 
+```
+
+## how to update sdk 
+
+```bash
+   flutter upgrade
+```
