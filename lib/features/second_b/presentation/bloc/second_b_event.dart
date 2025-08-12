@@ -6,3 +6,7 @@ abstract class SecondBEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class FetchUsers extends SecondBEvent {
+  const FetchUsers();
+}

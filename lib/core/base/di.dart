@@ -1,4 +1,8 @@
 import 'package:get_it/get_it.dart';
+import 'package:testing_arch/core/base/base_dio_factory.dart';
+import 'package:testing_arch/core/network/api_client.dart';
+import 'package:testing_arch/core/network/api_repository.dart';
+import 'package:testing_arch/core/network/api_repository_impl.dart';
 
 final instance = GetIt.instance;
 
@@ -28,8 +32,10 @@ final instance = GetIt.instance;
 
 Future<void> initDepedencyIndection() async {
 
-// Register your dependencies here
- 
+  instance.registerLazySingleton<BaseDioFactory>(() => BaseDioFactory());
+  final dio = instance<BaseDioFactory>().getDio();
+  instance.registerLazySingleton(()=> ApiClient(dio));
+  instance.registerLazySingleton<ApiRepository>(() => ApiRepositoryImpl());
   await instance.allReady();
   
 }

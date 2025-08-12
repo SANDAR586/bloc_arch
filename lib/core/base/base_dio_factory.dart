@@ -1,15 +1,17 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+
+
 class BaseDioFactory {
   static const String headerKeyContentType = "content-type";
   static const String headerApplicationJson = "application/json";
   static const String headerKeyAuthorization = "authorization";
   static const String headerKeyLanguage = "language";
 
-  final String _baseUrl;
+  final String _baseUrl = "https://jsonplaceholder.typicode.com/";
 
-  BaseDioFactory(this._baseUrl);
+  BaseDioFactory();
 
   Dio getDio(){
     var timeout=const Duration(seconds: 30);

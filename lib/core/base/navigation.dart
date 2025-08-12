@@ -1,6 +1,8 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:testing_arch/features/first_c/first_screen.dart';
 import 'package:testing_arch/features/fourth_provider/presentation/pages/fourth_screen.dart';
+import 'package:testing_arch/features/second_b/presentation/bloc/second_b_bloc.dart';
 import 'package:testing_arch/features/second_b/presentation/pages/second_screen.dart';
 import 'package:testing_arch/features/third_c/presentation/pages/third_screen.dart';
 
@@ -23,7 +25,7 @@ import 'package:testing_arch/features/third_c/presentation/pages/third_screen.da
  */
 
 final router = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/second',
   routes: [
     GoRoute(
       path: '/',
@@ -32,7 +34,10 @@ final router = GoRouter(
 
      GoRoute(
       path: '/second',
-      builder: (context, state) => const SecondScreen(),
+      builder: (context, state) => BlocProvider(
+        create: (context) => SecondBBloc(),
+        child: const SecondScreen(),
+      ),
     ),
      GoRoute(
       path: '/third',
