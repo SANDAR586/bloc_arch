@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testing_arch/features/second_b/presentation/bloc/second_b_bloc.dart';
+import 'package:testing_arch/features/second_b/presentation/widgets/user_list_view.dart';
     
 class SecondScreen extends StatelessWidget {
 
@@ -15,16 +16,7 @@ class SecondScreen extends StatelessWidget {
           if (state is SecondBInitial) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is SecondBFetched) {
-            return ListView.builder(
-              itemCount: state.users.length,
-              itemBuilder: (context, index) {
-                final user = state.users[index];
-                return ListTile(
-                  title: Text(user.name),
-                  subtitle: Text(user.email),
-                );
-              },
-            );
+            return UserListView(userCount: state.users.length, users: state.users);
           } else if (state is SecondBError) {
             return Center(child: Text(state.message));
           }
