@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:testing_arch/core/network/error_handler.dart';
+import 'package:testing_arch/core/error/error_handler.dart';
 
 class ApiError {
   ErrorCode code;
